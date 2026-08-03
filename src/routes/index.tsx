@@ -161,7 +161,9 @@ function Cta({ children, full }: { children: string; full?: boolean }) {
         full ? "w-full" : ""
       }`}
     >
-      <a href={CHECKOUT}>{children}</a>
+      <a href={CHECKOUT} target="_blank" rel="noreferrer">
+        {children}
+      </a>
     </Button>
   );
 }
