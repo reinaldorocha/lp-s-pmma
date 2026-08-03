@@ -57,28 +57,29 @@ const inclui = [
   "Acesso vitalício em qualquer dispositivo",
 ];
 
-const simulados = [
+const estrutura = [
   {
-    n: "120",
-    t: "Simulado 01 — Diagnóstico",
-    d: "Prova completa com todas as disciplinas para você medir exatamente onde está.",
+    n: "50",
+    t: "Conhecimentos Gerais",
+    itens: [
+      "Língua Portuguesa",
+      "História do Brasil",
+      "História do Maranhão",
+      "Geografia do Brasil",
+      "Geografia do Maranhão",
+      "Raciocínio Lógico (incluído na retificação recente)",
+    ],
   },
   {
-    n: "120",
-    t: "Simulado 02 — Conhecimentos Gerais",
-    d: "Português, Matemática, Atualidades, Informática, História e Geografia do Maranhão.",
-  },
-  {
-    n: "120",
-    t: "Simulado 03 — Legislação e Específicas",
-    d: "Direitos Humanos, Constitucional, Penal, Penal Militar, Estatuto e Lei de Organização da PMMA.",
-  },
-  {
-    n: "120",
-    t: "Simulado 04 — Reta Final",
-    d: "Prova integral no formato e na proporção exata do edital, para fazer na última semana.",
+    n: "70",
+    t: "Conhecimentos Específicos",
+    itens: [
+      "Legislação Institucional / Legislação pertinente à PMMA",
+      "Noções de Informática",
+    ],
   },
 ];
+
 
 const beneficios = [
   {
