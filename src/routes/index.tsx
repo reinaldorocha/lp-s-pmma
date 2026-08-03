@@ -2,6 +2,9 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { Check, ChevronRight, Lock, MessageCircle, ShieldCheck } from "lucide-react";
 
+import dep1 from "@/assets/depoimento-1.webp";
+import dep2 from "@/assets/depoimento-2.webp";
+import dep3 from "@/assets/depoimento-3.webp";
 import mockup from "@/assets/mockup-simulados.jpg";
 import { Button } from "@/components/ui/button";
 import {
