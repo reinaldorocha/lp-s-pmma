@@ -14,7 +14,12 @@ import {
 const TITLE = "4 Simulados Completos PMMA — 120 Questões Cada, Padrão CESPE/CEBRASPE";
 const DESCRIPTION =
   "4 simulados completos para a PMMA com 120 questões cada, todas as disciplinas do edital, gabarito comentado e bônus exclusivos. Acesso imediato.";
-const CHECKOUT = "#oferta";
+const CHECKOUT = "https://app.profjonathanrocha.com.br/c/qzmmpfq";
+const WHATSAPP =
+  "https://api.whatsapp.com/send/?phone=5586988812196&text=" +
+  encodeURIComponent(
+    "Olá! Tenho interesse nos 4 Simulados Completos da PMMA e gostaria de mais informações.",
+  );
 
 export const Route = createFileRoute("/")({
   head: () => ({
