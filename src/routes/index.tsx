@@ -425,7 +425,7 @@ function Index() {
             <p className="text-sm font-bold">Restou alguma dúvida?</p>
             <p className="mt-1 text-sm text-muted-foreground">Fale com a gente pelo WhatsApp</p>
             <Button asChild variant="outline" className="mt-5 rounded-full font-bold">
-              <a href="https://api.whatsapp.com/send/?phone=5586988812196" target="_blank" rel="noreferrer">
+              <a href={WHATSAPP} target="_blank" rel="noreferrer">
                 <MessageCircle className="size-4" /> Falar no WhatsApp
               </a>
             </Button>
@@ -434,11 +434,32 @@ function Index() {
       </section>
 
       <footer className="border-t border-border/50 py-8">
-        <p className="mx-auto max-w-3xl px-5 text-center text-xs text-muted-foreground">
-          Material de estudo independente, sem vínculo com a Polícia Militar do Maranhão ou com a
-          banca organizadora.
-        </p>
+        <div className="mx-auto max-w-3xl px-5 text-center">
+          <a
+            href={WHATSAPP}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-2 text-sm font-bold text-primary hover:underline"
+          >
+            <MessageCircle className="size-4" /> Suporte no WhatsApp
+          </a>
+          <p className="mt-4 text-xs text-muted-foreground">
+            Material de estudo independente, sem vínculo com a Polícia Militar do Maranhão ou com a
+            banca organizadora.
+          </p>
+        </div>
       </footer>
+
+      {/* WHATSAPP FLUTUANTE */}
+      <a
+        href={WHATSAPP}
+        target="_blank"
+        rel="noreferrer"
+        aria-label="Falar no WhatsApp"
+        className="fixed bottom-5 right-5 z-50 flex size-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg transition hover:scale-105"
+      >
+        <MessageCircle className="size-7" />
+      </a>
     </div>
   );
 }
