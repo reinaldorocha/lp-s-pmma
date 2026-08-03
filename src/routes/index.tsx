@@ -2,6 +2,9 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { Check, ChevronRight, Lock, MessageCircle, ShieldCheck } from "lucide-react";
 
+import dep1 from "@/assets/depoimento-1.webp";
+import dep2 from "@/assets/depoimento-2.webp";
+import dep3 from "@/assets/depoimento-3.webp";
 import mockup from "@/assets/mockup-simulados.jpg";
 import { Button } from "@/components/ui/button";
 import {
@@ -324,6 +327,31 @@ function Index() {
           </div>
         </div>
       </section>
+
+      {/* DEPOIMENTOS */}
+      <section className="border-t border-border/50 py-16">
+        <div className="mx-auto max-w-6xl px-5">
+          <h2 className="text-center text-2xl font-black tracking-tight sm:text-4xl">
+            Veja o que nossos alunos dizem
+          </h2>
+          <p className="mt-4 text-center text-muted-foreground">
+            Depoimentos reais de quem já usa o método para conquistar a vaga.
+          </p>
+          <div className="mt-12 grid gap-6 md:grid-cols-3">
+            {[dep1, dep2, dep3].map((src, i) => (
+              <img
+                key={src}
+                src={src}
+                alt={`Depoimento de aluno ${i + 1} — Simulados PMMA`}
+                loading="lazy"
+                className="w-full rounded-2xl border border-border/70"
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+
+
 
       {/* BÔNUS */}
       <section className="border-t border-border/50 py-16">
