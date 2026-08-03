@@ -57,28 +57,29 @@ const inclui = [
   "Acesso vitalício em qualquer dispositivo",
 ];
 
-const simulados = [
+const estrutura = [
   {
-    n: "120",
-    t: "Simulado 01 — Diagnóstico",
-    d: "Prova completa com todas as disciplinas para você medir exatamente onde está.",
+    n: "50",
+    t: "Conhecimentos Gerais",
+    itens: [
+      "Língua Portuguesa",
+      "História do Brasil",
+      "História do Maranhão",
+      "Geografia do Brasil",
+      "Geografia do Maranhão",
+      "Raciocínio Lógico (incluído na retificação recente)",
+    ],
   },
   {
-    n: "120",
-    t: "Simulado 02 — Conhecimentos Gerais",
-    d: "Português, Matemática, Atualidades, Informática, História e Geografia do Maranhão.",
-  },
-  {
-    n: "120",
-    t: "Simulado 03 — Legislação e Específicas",
-    d: "Direitos Humanos, Constitucional, Penal, Penal Militar, Estatuto e Lei de Organização da PMMA.",
-  },
-  {
-    n: "120",
-    t: "Simulado 04 — Reta Final",
-    d: "Prova integral no formato e na proporção exata do edital, para fazer na última semana.",
+    n: "70",
+    t: "Conhecimentos Específicos",
+    itens: [
+      "Legislação Institucional / Legislação pertinente à PMMA",
+      "Noções de Informática",
+    ],
   },
 ];
+
 
 const beneficios = [
   {
@@ -255,38 +256,46 @@ function Index() {
         </div>
       </section>
 
-      {/* DIVISÃO DOS SIMULADOS */}
+      {/* ESTRUTURA DA PROVA */}
       <section className="border-t border-border/50 py-16">
         <div className="mx-auto max-w-6xl px-5">
-          <SectionLabel>Divisão dos 4 simulados</SectionLabel>
+          <SectionLabel>Estrutura de cada simulado</SectionLabel>
           <h2 className="mt-4 text-center text-2xl font-black tracking-tight sm:text-4xl">
-            Cobertura completa de todas as disciplinas
+            120 questões por simulado, na divisão oficial do edital
           </h2>
-          <div className="mt-12 space-y-4">
-            {simulados.map((s) => (
-              <div
-                key={s.t}
-                className="flex flex-col gap-4 rounded-2xl border border-border/70 bg-card p-6 sm:flex-row sm:items-center"
-              >
-                <div className="flex shrink-0 flex-col items-center rounded-xl bg-primary/10 px-6 py-3">
-                  <span className="text-3xl font-black leading-none text-primary">{s.n}</span>
-                  <span className="text-[10px] font-bold uppercase tracking-widest text-primary/80">
-                    questões
-                  </span>
+          <div className="mx-auto mt-12 max-w-3xl rounded-2xl border border-border/70 bg-card p-6 sm:p-8">
+            <div className="space-y-8">
+              {estrutura.map((b) => (
+                <div key={b.t} className="flex flex-col gap-4 sm:flex-row">
+                  <div className="flex h-fit shrink-0 flex-col items-center rounded-xl bg-primary/10 px-6 py-3">
+                    <span className="text-3xl font-black leading-none text-primary">{b.n}</span>
+                    <span className="text-[10px] font-bold uppercase tracking-widest text-primary/80">
+                      itens
+                    </span>
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-extrabold">{b.t}</h3>
+                    <ul className="mt-2 space-y-1.5">
+                      {b.itens.map((i) => (
+                        <li key={i} className="flex gap-2 text-sm text-muted-foreground">
+                          <span className="text-primary">•</span>
+                          <span>{i}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="text-lg font-extrabold">{s.t}</h3>
-                  <p className="mt-1 text-sm text-muted-foreground">{s.d}</p>
-                </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
           <p className="mt-8 text-center text-sm text-muted-foreground">
-            Total: <strong className="text-primary">480 questões</strong> inéditas comentadas no
-            padrão CESPE/CEBRASPE.
+            São <strong className="text-primary">4 simulados</strong> nesse mesmo formato — total de{" "}
+            <strong className="text-primary">480 questões</strong> inéditas comentadas no padrão
+            CESPE/CEBRASPE.
           </p>
         </div>
       </section>
+
 
       {/* BENEFÍCIOS */}
       <section className="border-t border-border/50 bg-card/40 py-16">
