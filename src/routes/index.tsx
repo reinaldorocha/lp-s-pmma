@@ -190,8 +190,10 @@ function Index() {
           </span>
           <h1 className="mx-auto mt-8 max-w-3xl text-4xl font-black leading-[1.08] tracking-tight sm:text-5xl md:text-6xl">
             Passe na <span className="text-primary">PMMA</span> treinando com{" "}
-            <span className="text-primary">4 simulados completos</span> de 120 questões cada 🚔
+            <span className="text-primary">4 simulados completos</span> de 120 questões no padrão{" "}
+            <span className="text-primary">CESPE/CEBRASPE</span> 🚔
           </h1>
+
           <p className="mx-auto mt-6 max-w-2xl text-base text-muted-foreground sm:text-lg">
             Preparação focada 100% no edital da <strong className="text-foreground">Polícia
             Militar do Maranhão</strong>, com todas as disciplinas, no estilo da banca. Desarme as
