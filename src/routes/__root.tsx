@@ -99,7 +99,16 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
       { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
     ],
+    scripts: [
+      { children: 'window.pixelId = "6824be690a5d57fc0d1b7f42";' },
+      {
+        src: "https://cdn.utmify.com.br/scripts/pixel/pixel.js",
+        async: true,
+        defer: true,
+      },
+    ],
   }),
+
 
   shellComponent: RootShell,
   component: RootComponent,
